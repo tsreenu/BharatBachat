@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Bachat - Save As You Spend, Prosper As You Grow</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+    color: #333;
+}
+.features {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 4rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works {
+    background: rgba(250, 250, 250, 0.9);
+    border-radius: 10px;
+    padding: 4rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the Content Section */
+.content-section {
+    background: linear-gradient(to right, #f0f8ff, #e6f7ff);
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Styling */
+.content-grid {
+    display: flex;
+    flex-direction: row; /* Ensure image and text are side by side */
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Text Styling */
+.content-text {
+    flex: 1; /* Allow text to take available space */
+}
+
+.content-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0A6EC7;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease;
+}
+
+/* Underline Effect for Heading */
+.content-text h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: #0A6EC7;
+    margin: 0.5rem auto;
+    transition: width 0.4s ease;
+}
+
+.content-text h2:hover::after {
+    width: 100%;
+}
+
+/* Paragraph Styling */
+.content-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease;
+}
+
+/* Paragraph Hover Effect */
+.content-text p:hover {
+    color: #0A6EC7;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Image Styling */
+.content-image {
+    flex: 1; /* Allow image to take available space */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
+}
+
+.content-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-grid {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        text-align: center;
+    }
+
+    .content-text h2 {
+        font-size: 2rem;
+    }
+
+    .content-text p {
+        font-size: 1rem;
+    }
+
+    .content-image {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #0A6EC7;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333333;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 2rem;
+    background: var(--light-gray);
+    text-align: center;
+}
+
+.features h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 4rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.how-it-works h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.step-card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.step-card:hover {
+    transform: scale(1.05);
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.step-card:hover .step-number {
+    color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features h2,
+    .how-it-works h2 {
+        font-size: 2rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img alt="Bharat Bachat" src="images/logo.png" /></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="vision.html">Vision</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h2>Save As You Spend</h2>
+                    <p>Turning everyday transactions into opportunities for financial growth.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h2>Effortless Savings</h2>
+                    <p>Automatically save a percentage of every UPI transaction.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h2>Wealth Growth Options</h2>
+                    <p>Choose between Fixed Deposits, Mutual Funds, or 24K Gold.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-buttons">
+            <div class="carousel-dot active"></div>
+            <div class="carousel-dot"></div>
+            <div class="carousel-dot"></div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="content-grid">
+            <div class="content-text">
+                <h2>Why Bharat Bachat?</h2>
+                <p>India's financial landscape is transforming, but the gap between spending and saving remains wide. Bharat Bachat bridges this gap by seamlessly integrating savings into your daily life without disrupting your lifestyle.</p>
+            </div>
+            <div class="content-image">
+                <img src="images/FinTrans.webp" alt="Financial Growth">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Effortless Savings</h3>
+                <p>Automatically save a percentage of every UPI transaction.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Personalized Goals</h3>
+                <p>Set and achieve your financial milestones with ease.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Smart Categorization</h3>
+                <p>Save more on non-essential spending like dining and luxury items.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Wealth Growth Options</h3>
+                <p>Choose between Fixed Deposits, Mutual Funds, or 24K Gold.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Opt-in to Bharat Bachat's savings model</h3>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Spend as usual using UPI</h3>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Watch your savings grow automatically</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="vision.html">Our Vision</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="#">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
