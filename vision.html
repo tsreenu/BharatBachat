@@ -235,6 +235,58 @@ body {
         font-size: 0.85rem;
     }
 }
+.content-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #f8f9fa, #e3f2fd); /* Cool gradient background */
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.content-text {
+    flex: 1; /* Allow text to take available space */
+}
+
+.content-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0A6EC7;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease;
+}
+/* Underline Effect for Heading */
+.content-text h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: #0A6EC7;
+    margin: 0.5rem auto;
+    transition: width 0.4s ease;
+}
+
+.content-text h2:hover::after {
+    width: 100%;
+}
+
+/* Paragraph Styling */
+.content-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease;
+}
+/* Paragraph Hover Effect */
+.content-text p:hover {
+    color: #0A6EC7;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
     </style>
 </head>
@@ -256,31 +308,30 @@ body {
         <p>Building a financially secure future for every Indian</p>
     </section>
 
-    <section class="benefits">
-        <img src="images/vision.jpg" alt="Benefits Illustration">
-        <div>
-            <h2>Benefits of Bharat Bachat</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h3>Effortless Savings</h3>
-                    <p>Save without changing your spending habits or lifestyle.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Financial Discipline</h3>
-                    <p>Automatically build wealth through small, consistent contributions.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Emergency Preparedness</h3>
-                    <p>Create a safety net to rely on during unforeseen situations.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Customizable Savings</h3>
-                    <p>Tailor your savings rates to match your financial goals and spending categories.</p>
-                </div>
+    <section class="content-section">
+        <div class="content-grid">
+            <div class="content-text">
+                <h2>Our Mission</h2>
+                <p>To empower every Indian to achieve financial security and independence by transforming everyday transactions into meaningful savings, fostering a culture of financial discipline, and creating a pathway to long-term wealth and prosperity. We aim to bridge the gap between spending and saving, making financial growth accessible to all, and contributing to a Vikasit Bharat.</p>
+            </div>
+            <div class="content-image">
+                <img src="images/Indian Market Street and Paying UPI (1).jpg" alt="Founder's Journey">
             </div>
         </div>
     </section>
-    
+
+    <section class="content-section inspiration">
+        
+        <div class="content-grid">
+            <div class="content-image">
+                <img src="images/UPI Categeory wise Saving Image.jpg" alt="Inspiration">
+            </div>
+            <div class="content-text">
+                <h2>Our Vision</h2>
+                <p>To become India’s leading fintech platform for inclusive savings and investments, leveraging innovative technologies to make financial literacy, security, and growth a reality for every household. Our vision is to inspire a savings-driven economy, enabling individuals to achieve their financial aspirations while contributing to the nation’s progress.</p>
+            </div>
+        </div>
+    </section>
 
     <section class="categories-section">
         <h2>Smart Savings Categories</h2>
